@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* 16px */
+  font-size: 100%;
+}
+header {
+  display: flex;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 0.9em;
+}
+.logo {
+  max-width: 10rem;
+  margin-left: 1rem;
+}
+.logo img {
+  margin-top: 0.5rem;
+  width: 8rem;
+  height: auto;
+}
+
+header > div {
+  display: flex;
+  justify-content: center;
+  max-width: 1170px;
+}
+header .nav{
+  display: flex;
+  margin-left: 7rem;
+  line-height: 4rem;
+}
+a {
+  text-decoration: none;
+}
+.nav__item + .nav__item {
+  margin-left: 2rem;
+}
+.nav__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0rem;
+
+  font-size: 1rem;
+  color: #433246;
+  
+}
+
+.nav__item:hover {
+  color: #c13a27;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.nav__item:before {
+    height: 6px;
+    width: 60%;
+    position: absolute;
+    top: 0;
+  
+    content: "";
+    background-color: #c13a27;
+    border-radius: 5px;
+    transition: all .5s linear;
+    opacity: 0;
+  }
+.nav__item:hover:before {
+    height: 6px;
+    width: 60%;
+    position: absolute;
+    top: 0;
+  
+    content: "";
+    background-color: #c13a27;
+    border-radius: 5px;
+    opacity: 1;
+  }
+.nav__item--active::before {
+  height: 6px;
+  width: 60%;
+  position: absolute;
+  top: 0;
+
+  content: "";
+  background-color: #c13a27;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.nav__item--active {
+  color: #c13a27;
+}
+
+.language {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  color: #433246;
+}
+.language__btn {
+  padding: 5px 12px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: transparent;
+  color: rgb(143, 136, 136);
+}
+.language__btn:hover {
+  color: #c13a27;
+  transition: all 0.5s ease;
+}
+
+.languge__btn--active {
+  border-radius: 5px;
+  border: 1px solid #c13a27;
+  color: #433246;
+  font-weight: 600;
+  color: #c13a27;
+}
+.icon-bar {
+  display: none;
+}

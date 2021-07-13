@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #slideshow {
+    width:900px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.container {
+    width:1200px; /* 300 x 4 */
+    position:relative;
+    animation:slide 8s ease-in-out infinite;
+}
+
+.container section {
+    width:300px;
+    height:200px;
+    float:left;
+}
+
+.container section:nth-child(1) {background-color:green;}
+.container section:nth-child(2) {background-color:orange;}
+.container section:nth-child(3) {background-color:blue;}
+.container section:nth-child(4) {background-color:red;}
+
+.container:hover {
+   animation-play-state:paused;
+   -webkit-animation-play-state:paused;
+}
+
+
+
+@keyframes slide {
+    0% {left:0;}
+    25% {left:-300px;}
+    50% {left:-600px;}
+    75% {left:-900px;}
+    /* 100% {left:0;} */
+}
+
+
+
+
+</style>
+<body>
+    <div id="slideshow">
+        <div class="container">
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+        </div>
+</body>
+</html>
